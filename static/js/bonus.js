@@ -6,7 +6,7 @@ function optionChanged2(){
     // Assign the value of the dropdown menu option to a variable
     var dataset = dropdownMenu.property("value");
     
-    d3.json("../../samples.json").then(function(data){
+    d3.json("samples.json").then(function(data){
         var samples_data = data.samples
         var id_list = samples_data.map(d => d.id);
 
@@ -23,7 +23,7 @@ function optionChanged2(){
 };
 
 function init_gauge(){
-    d3.json("../../samples.json").then(function(dataset){
+    d3.json("samples.json").then(function(dataset){
         var paneldata = dataset.metadata[0];
         var wfreq_data = paneldata.wfreq
 
@@ -76,7 +76,7 @@ function init_gauge(){
 
 
 function generate_gauge(index){
-    d3.json("../../samples.json").then(function(dataset){
+    d3.json("samples.json").then(function(dataset){
         var paneldata = dataset.metadata[index];
         var wfreq_data = paneldata.wfreq
 
