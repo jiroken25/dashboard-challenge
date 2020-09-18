@@ -1,5 +1,5 @@
 // Get json data to add the options
-d3.json("../samples.json").then(function(data){
+d3.json("samples.json").then(function(data){
     var options = data.names
     options.forEach(function(name){
                 d3.select("select")
@@ -16,7 +16,7 @@ function optionChanged(){
     // Assign the value of the dropdown menu option to a variable
     var dataset = dropdownMenu.property("value");
     
-    d3.json("../samples.json").then(function(data){
+    d3.json("samples.json").then(function(data){
         var samples_data = data.samples
         var id_list = samples_data.map(d => d.id);
 
@@ -37,7 +37,7 @@ function optionChanged(){
 
 // Function to create bar chart
  function bar_create(index) {
-    d3.json("../samples.json").then(function(dataset) {
+    d3.json("samples.json").then(function(dataset) {
 
      var id_sample =  dataset.samples[index]
      var sort_list = [];
@@ -98,7 +98,7 @@ function optionChanged(){
       Plotly.newPlot('bar', data, layout)})};
 
 function bubble_create(index) {
-        d3.json("../samples.json").then(function(dataset) {
+        d3.json("samples.json").then(function(dataset) {
     
         var id_sample =  dataset.samples[index]
         var x_value = id_sample.otu_ids
@@ -129,7 +129,7 @@ function bubble_create(index) {
 
 
 function generate_metadata(index){
-    d3.json("../samples.json").then(function(dataset){
+    d3.json("samples.json").then(function(dataset){
        var paneldata = dataset.metadata[index];
      d3.select("#sample-metadata")
        .html(`id: ${paneldata.id}<br/>ethnicity: ${paneldata.ethnicity}<br/>gendar: ${paneldata.gendar}<br/>age: ${paneldata.age}<br/>location: ${paneldata.location}<br/>bbtype: ${paneldata.bbtype}<br/>wfreq: ${paneldata.wfreq}<br/>`)
