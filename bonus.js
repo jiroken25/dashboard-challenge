@@ -40,7 +40,7 @@ function init_gauge(){
             marker: {
               colors: ['','','','','','','','','','white'],
               labels: ['0-1','1-2','2-3','3-4','4-5','5-6','6-7','7-8','8-9'],
-              hoverinfo: 'label'
+              hoverinfo: 'none'
             }
           }
       
@@ -63,7 +63,8 @@ function init_gauge(){
             }],
             title: '<b>Bellyy Button Washing Frequency</b><br>scrub per week',
             xaxis: {visible: false, range: [-1, 1]},
-            yaxis: {visible: false, range: [-1, 1]}
+            yaxis: {visible: false, range: [-1, 1]},
+            hovermode: false
           };
       
           var data = [trace];
@@ -93,7 +94,7 @@ function generate_gauge(index){
             marker: {
               colors: ['','','','','','','','','','white'],
               labels: ['0-1','1-2','2-3','3-4','4-5','5-6','6-7','7-8','8-9'],
-              hoverinfo: 'label'
+              hoverinfo: 'skip'
             }
           }
       
@@ -115,7 +116,8 @@ function generate_gauge(index){
             }],
             title: '<b>Bellyy Button Washing Frequency</b><br>scrub per week',
             xaxis: {visible: false, range: [-1, 1]},
-            yaxis: {visible: false, range: [-1, 1]}
+            yaxis: {visible: false, range: [-1, 1]},
+            hovermode: false
           };
       
           var data = [trace];
