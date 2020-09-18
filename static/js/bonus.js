@@ -113,7 +113,6 @@ function generate_gauge(index){
                 width: 3
               }
             }],
-            title: '<b>Bellyy Button Washing Frequency</b><br>Scrubs per Week',
             xaxis: {visible: false, range: [-1, 1]},
             yaxis: {visible: false, range: [-1, 1]}
           };
