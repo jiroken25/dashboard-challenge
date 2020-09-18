@@ -4,8 +4,6 @@
 
 ### index.html - html file to show the data
 ### samples.json - sample data is stored
-
-## static/js 
 ### - app.js read json data and show the bar graph and bubble chart
 ### - bonus.js read json data and show the gauge graph.
 
