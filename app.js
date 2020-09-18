@@ -72,7 +72,7 @@ function optionChanged(){
         for (var k = 0; k <id_sample.sample_values.length ; k++) {
             x_list.push(sort_list[k].sample_values);
             y_list.push(sort_list[k].otu_ids);
-            label_list.push(sort_list[k].otu_lables);
+            label_list.push(sort_list[k].otu_labels);
     
          };
     };
