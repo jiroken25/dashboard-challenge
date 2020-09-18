@@ -6,7 +6,7 @@ function optionChanged2(){
     // Assign the value of the dropdown menu option to a variable
     var dataset = dropdownMenu.property("value");
     
-    d3.json("samples.json").then(function(data){
+    d3.json("./samples.json").then(function(data){
         var samples_data = data.samples
         var id_list = samples_data.map(d => d.id);
 
