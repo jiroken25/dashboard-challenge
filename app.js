@@ -44,13 +44,12 @@ function optionChanged(){
      var x_list = [];
      var y_list = [];
      var label_list = [];
-
-
+     
 // to sort values by sample_values
     for (var j = 0; j < id_sample.sample_values.length; j++) 
-        sort_list.push({'sample_values': id_sample.sample_values[j], 'otu_ids': "OTU" + String(id_sample.otu_ids[j]), 'otu_labels':String(id_sample.otu_labels[j])});
+        sort_list.push({'sample_values': id_sample.sample_values[j], 'otu_ids': "OTU" + String(id_sample.otu_ids[j]), 'otu_labels':id_sample.otu_labels[j]});
     
-
+        
     sort_list.sort(function(a, b) { 
         return ((b.sample_values - a.sample_values));
         });
@@ -60,7 +59,7 @@ function optionChanged(){
     for (var k = 0; k < 10; k++) {
         x_list.push(sort_list[k].sample_values);
         y_list.push(sort_list[k].otu_ids);
-        label_list.push(sort_list[k].otu_lables);
+        label_list.push(sort_list[k].otu_labels);
 
 
 
@@ -77,6 +76,8 @@ function optionChanged(){
     
          };
     };
+
+    
 
         var x_value = x_list;
         var y_value = y_list;
